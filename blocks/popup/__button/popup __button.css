@@ -31,7 +31,3 @@
 .popup__button:hover {
     opacity: 0.8;
 }
-
-.popup__button_text {
-    margin: 0;
-}
