@@ -1,0 +1,9 @@
+.element__description {
+    max-width: 282px;
+    min-height: 23px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}

@@ -1,0 +1,33 @@
+.popup__fild {
+    max-width: 358px;
+    min-height: 27px;
+    margin-top: 54px;
+    margin-left: 36px;
+    margin-bottom: 0;
+    padding-top: 0;
+    z-index: 1;
+    background-image: url(../../../images/popup/Line2.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    border: none;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.popup__fild:last-of-type {
+margin-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .popup__fild {
+        max-width: 238px;
+        margin-top: 75px;
+        margin-left: 22px;
+        font-size: 14px;
+        line-height: 17px;
+        background-size: 238px;
+        }
+  }
