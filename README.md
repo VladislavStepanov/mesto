@@ -10,3 +10,5 @@
 * HTML
 * JS
 
+### Ссылка на GH Pages:
+https://vladislavstepanov.github.io/mesto/

@@ -1,17 +1,18 @@
 .profile__text {
     max-width: 336px;
-    min-height: 18px;
     margin: 0;
     grid-area: text;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 767px) {
     .profile__text {
         max-width: 282px;
-        min-height: 14px;
         font-size: 14px;
         line-height: 17px;
         margin-left: auto;

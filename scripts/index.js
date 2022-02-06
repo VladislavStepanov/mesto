@@ -1,6 +1,7 @@
 const ProfileOpenPopupButton = document.querySelector('.profile__button')
 const Popup = document.querySelector('.popup')
 const PopupCloseButton = document.querySelector('.popup__close')
+const SaveButton = document.querySelector('.popup__button')
 
 
 ProfileOpenPopupButton.addEventListener('click' , function () {
@@ -8,6 +9,10 @@ ProfileOpenPopupButton.addEventListener('click' , function () {
 })
 
 PopupCloseButton.addEventListener('click' , function () {
+    Popup.classList.remove('popup_opened')
+})
+
+SaveButton.addEventListener('click' , function () {
     Popup.classList.remove('popup_opened')
 })
 
