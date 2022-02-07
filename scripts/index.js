@@ -1,50 +1,27 @@
-const ProfileOpenPopupButton = document.querySelector('.profile__button')
-const Popup = document.querySelector('.popup')
-const PopupCloseButton = document.querySelector('.popup__close')
-const SaveButton = document.querySelector('.popup__button')
+const profileOpenPopupButton = document.querySelector('.profile__button')
+const popup = document.querySelector('.popup')
+const popupCloseButton = document.querySelector('.popup__close')
+const profileTitle = document.querySelector('.profile__title');
+const profileText = document.querySelector('.profile__text');
+const formElement = document.querySelector('.popup__form')
+const nameInput = document.querySelector('.popup__fild_text_name')
+const jobInput = document.querySelector('.popup__fild_text_work')
 
-
-ProfileOpenPopupButton.addEventListener('click' , function () {
-    Popup.classList.add('popup_opened')
-})
-
-PopupCloseButton.addEventListener('click' , function () {
-    Popup.classList.remove('popup_opened')
-})
-
-SaveButton.addEventListener('click' , function () {
-    Popup.classList.remove('popup_opened')
-})
-
-// Находим форму в DOM
-let formElement = document.querySelector('.popup__form')
-// Находим поля формы в DOM
-let nameInput = document.querySelector('.popup__fild_name')
-let jobInput = document.querySelector('.popup__fild_work')
-
-// Обработчик «отправки» формы, хотя пока
-// она никуда отправляться не будет
-function formSubmitHandler (evt) {
-    evt.preventDefault(); // Эта строчка отменяет стандартную отправку формы.
-                                                // Так мы можем определить свою логику отправки.
-                                                // О том, как это делать, расскажем позже.
-
-    // Получите значение полей jobInput и nameInput из свойства value
-        console.log(jobInput.value);
-        console.log(nameInput.value);
-
-
-      
-    // Выберите элементы, куда должны быть вставлены значения полей
-    let ProfileTitle = document.querySelector('.profile__title');
-    let ProfileText = document.querySelector('.profile__text');
-
-
-    // Вставьте новые значения с помощью textContent
-    ProfileTitle.textContent = nameInput.value;
-    ProfileText.textContent = jobInput.value;
+function popupOpen () {
+    popup.classList.add('popup__opened')
+}
+function popupClose () {
+    popup.classList.remove('popup__opened')
 }
 
-// Прикрепляем обработчик к форме:
-// он будет следить за событием “submit” - «отправка»
+profileOpenPopupButton.addEventListener('click' , popupOpen)
+popupCloseButton.addEventListener('click' , popupClose)
+
+function formSubmitHandler (evt) {
+    evt.preventDefault();
+    profileTitle.textContent = nameInput.value;
+    profileText.textContent = jobInput.value;
+    popupClose()
+}
+
 formElement.addEventListener('submit', formSubmitHandler); 

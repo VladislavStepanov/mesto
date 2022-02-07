@@ -2,11 +2,11 @@
     width: 24px;
     height: 24px;
     grid-area: button;
-    background-image: url(../../../images/profile/edit.png);
+    background-image: url(../../../images/profile/edit.svg);
     background-size: 10px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: black;
+    background-color: transparent;
     border: solid 1px white;
     transition: 0.4s;
     cursor: pointer;

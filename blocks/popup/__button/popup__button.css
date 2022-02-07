@@ -7,13 +7,14 @@
     border-radius: 2px;
     border: none;
     transition: .4s;
-    font-family: Inter;
+    font-family: 'Inter', ‘Arial’, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

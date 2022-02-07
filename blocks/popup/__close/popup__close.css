@@ -2,8 +2,8 @@
     width: 32px;
     height: 32px;
     position: absolute;
-    left: 438px;
-    bottom: 338px;
+    right: -40px;
+    top: -40px;
     z-index: 1;
     background: none;
     background-image: url(../../../images/popup/close.svg);
@@ -15,8 +15,8 @@
 
 @media screen and (max-width: 767px) {
     .popup__close {
-        left: calc(282px - 20px);
-        bottom: calc(322px + 16px);
+        right: 0px;
+        top: -36px;
         background-size: 20px;
         width: 20px;
         height: 20px;

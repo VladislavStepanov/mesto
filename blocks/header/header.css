@@ -5,6 +5,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 41px;
+    border: solid hsl(0, 0%, 33%, 0.7);
+    border-width: 0 0 1px 0;
 }
 
 @media screen and (max-width: 767px) {

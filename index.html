@@ -10,8 +10,7 @@
   <div class="page">
 
     <header class="header">
-      <div class="header__logo"></div>
-      <div class="header__line"></div>
+      <img class="header__logo" src="./images/header/logo.svg" alt="логотип">
     </header>
 
     <main class="content">
@@ -20,70 +19,70 @@
         <img class="profile__avatar" src="./images/profile/avatar.jpg" alt="аватар">
         <div class="profile__info">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
-          <button class="profile__button"></button>
+          <button class="profile__button" type="button" aria-label="Редактировать профиль"></button>
           <p class="profile__text">Исследователь океана</p>
         </div>
-        <button class="profile__add-button"></button>
+        <button class="profile__add-button" type="button" aria-label="Добавить"></button>
       </section>
 
       <section class="elements">
-        <div class="element">
+        <article class="element">
           <img class="element__img" src="./images/elements/karachevsk.png" alt="Карачевск">
           <div class="element__description">
             <h2 class="element__title">Карачаевск</h2>
-            <button class="element__like"></button>
+            <button class="element__like" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__img" src="./images/elements/elbrus.png" alt="Гора Эльбрус">
           <div class="element__description">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like"></button>
+            <button class="element__like" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__img" src="./images/elements/dombay.png" alt="Домбай">
           <div class="element__description">
             <h2 class="element__title">Домбай</h2>
-            <button class="element__like"></button>
+            <button class="element__like" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__img" src="./images/elements/elbrus2.png" alt="Гора Эльбрус">
           <div class="element__description">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button class="element__like"></button>
+            <button class="element__like" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__img" src="./images/elements/dombay2.png" alt="Домбай">
           <div class="element__description">
             <h2 class="element__title">Домбай</h2>
-            <button class="element__like"></button>
+            <button class="element__like" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
-        <div class="element">
+        </article>
+        <article class="element">
           <img class="element__img" src="./images/elements/karachevsk.png" alt="Карачаево-Черкессия">
           <div class="element__description">
             <h2 class="element__title">Карачаево-Черкессия</h2>
-            <button class="element__like"></button>
+            <button class="element__like" type="button" aria-label="Нравится"></button>
           </div>
-        </div>
+        </article>
       </section>
     </main>
 
     <footer class="footer">
-      <p class="footer__text">© 2020 Mesto Russia</p>
+      <p class="footer__text">&copy; 2020 Mesto Russia</p>
     </footer>
 
     <div class="popup">
       <div class="popup__container">
-        <button class="popup__close"></button>
+        <button class="popup__close" type="button" aria-label="Закрыть"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form">
-          <input class="popup__fild popup__fild_name" type="text" value="Жак-Ив Кусто">
-          <input class="popup__fild popup__fild_work" type="text" value="Исследователь океана">
-          <button class="popup__button">Сохранить</button>
+        <form class="popup__form" name="popupForm">
+          <input class="popup__fild popup__fild_text_name" name="fildName" type="text" value="Жак-Ив Кусто">
+          <input class="popup__fild popup__fild_text_work" name="fildWork" type="text" value="Исследователь океана">
+          <button class="popup__button" type="submit" aria-label="Сохранить">Сохранить</button>
         </form>
       </div>
     </div>

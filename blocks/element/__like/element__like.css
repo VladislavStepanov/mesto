@@ -7,6 +7,8 @@
     background-size: 22px 19px;
     background-color: white;
     border: none;
+    cursor: pointer;
+    align-self: center;
 }
 
 .element__like:hover {
@@ -15,5 +17,5 @@
 
 .element__like:active {
     opacity: 1;
-    background-image: url(../../../images/elements/active-like.png);
+    background-image: url(../../../images/elements/active-like.svg);
 }
