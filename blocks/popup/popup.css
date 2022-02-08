@@ -7,20 +7,5 @@
     top: 0px;
     width: 100%;
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* это очень удобно, спасибо! */
 }
-
-/* Извините, но не получается сделать прозрачность без before, 
-попап становится тоже прозрачным, индексы не помогают.
-Учили на вебинарах делать именно так.*/
-
-.popup::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #000;
-    opacity: .5;
-    z-index: -2;
-  }
