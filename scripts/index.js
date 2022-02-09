@@ -9,6 +9,8 @@ const jobInput = document.querySelector('.popup__fild_text_work')
 
 function popupOpen () {
     popup.classList.add('popup_opened')
+    nameInput.value = profileTitle.textContent;
+    jobInput.value = profileText.textContent;
 }
 function popupClose () {
     popup.classList.remove('popup_opened')
@@ -16,12 +18,6 @@ function popupClose () {
 
 profileOpenPopupButton.addEventListener('click' , popupOpen)
 popupCloseButton.addEventListener('click' , popupClose)
-profileOpenPopupButton.addEventListener('click', openPopupEdit);
-
-function openPopupEdit (evt) {
-    nameInput.value = profileTitle.textContent;
-    jobInput.value = profileText.textContent;
-  }
 
 function formSubmitHandler (evt) {
     evt.preventDefault();
