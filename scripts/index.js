@@ -91,7 +91,7 @@ popupCloseButton.addEventListener('click', function() {
 });
 
 function openPopupImage(event) {
-  popupImage.classList.add('popup_opened')
+  doOpenPopap(popupImage)
   popupZoomImage.src= event.target.src; 
   popupImageDescription.textContent= event.target.alt;
   popupZoomImage.alt= event.target.alt;
