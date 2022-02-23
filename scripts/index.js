@@ -25,6 +25,7 @@ const items = [
   }
 ];
 
+
 const popup = document.querySelector('.popup')
 const popupCloseButton = document.querySelector('.popup__close');
 const popupCloseImage = document.querySelector('.popup__container_image')
@@ -51,13 +52,33 @@ const popupImage = document.querySelector('.popup_image');
 const popupImageCloseButton = document.querySelector('.popup__close_image')
 const popupZoomImage = document.querySelector('.popup__zoom-image')
 const popupImageDescription = document.querySelector('.popup__description')
+const body = document.querySelector('.body')
 
-function doClosePopap (element) {
-  element.classList.remove('popup_opened')
-}
+
 
 function doOpenPopap (element) {
   element.classList.add('popup_opened')
+  element.addEventListener('click', doCloseByOverlay);
+  body.addEventListener('keydown', doCloseByEsc);
+}
+
+function doClosePopap (element) {
+  element.classList.remove('popup_opened')
+  element.removeEventListener('click', doCloseByOverlay);
+  body.removeEventListener('keydown', doCloseByEsc);
+}
+
+function doCloseByOverlay(event) {
+  if (event.target === event.currentTarget) {
+    doClosePopap(event.target);
+  }
+}
+
+function doCloseByEsc (event) {
+  const popupOpened = document.querySelector('.popup_opened');
+  if (event.key === 'Escape') {
+    doClosePopap(popupOpened);
+  }
 }
 
 profileOpenPopupButton.addEventListener('click', function(){
@@ -84,10 +105,18 @@ popupCloseImage.addEventListener('click', function() {
 
 popupClosePlace.addEventListener('click', function() {
   doClosePopap(popupPlace)
-});
+  const inputElements = popupPlace.querySelectorAll('.popup__fild');
+  inputElements.forEach((inputElement) =>{
+    hideInputError(config, popupPlace, inputElement);
+  })
+})
 
 popupCloseButton.addEventListener('click', function() {
   doClosePopap(popupName)
+  const inputElements = popupName.querySelectorAll('.popup__fild');
+  inputElements.forEach((inputElement) =>{
+    hideInputError(config, popupName, inputElement);
+  })
 });
 
 function openPopupImage(event) {

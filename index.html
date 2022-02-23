@@ -6,7 +6,7 @@
   <title>Место</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
-<body>
+<body class="body">
   <div class="page">
 
     <header class="header">
@@ -49,8 +49,10 @@
         <button class="popup__close" type="button" aria-label="Закрыть"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__form" name="popupForm">
-          <input class="popup__fild popup__fild_text_name" name="fildName" type="text" value="">
-          <input class="popup__fild popup__fild_text_work" name="fildWork" type="text" value="">
+          <input class="popup__fild popup__fild_text_name" name="fildName" type="text" value="" required minlength="2" maxlength="40">
+          <span class="popup__fild-error" name="fildName-error"></span>
+          <input class="popup__fild popup__fild_text_work" name="fildWork" type="text" value="" required minlength="2" maxlength="200">
+          <span class="popup__fild-error" name="fildWork-error"></span>
           <button class="popup__button" type="submit" aria-label="Сохранить">Сохранить</button>
         </form>
       </div>
@@ -61,9 +63,11 @@
         <button class="popup__close popup__close_place" type="button" aria-label="Закрыть"></button>
         <h2 class="popup__title">Новое место</h2>
         <form class="popup__form" name="popupForm">
-          <input class="popup__fild popup__fild_text_title" name="fildTitle" type="text" value="" placeholder="Название">
-          <input class="popup__fild popup__fild_text_link" name="fildLink" type="url" value="" placeholder="Ссылка на картинку">
-          <button class="popup__button" type="submit" aria-label="Сохранить">Создать</button>
+          <input class="popup__fild popup__fild_text_title" name="fildTitle" type="text" value="" placeholder="Название" required minlength="2" maxlength="40">
+          <span class="popup__fild-error" name="fildTitle-error"></span>
+          <input class="popup__fild popup__fild_text_link" name="fildLink" type="url" value="" placeholder="Ссылка на картинку" required>
+          <span class="popup__fild-error" name="fildLink-error"></span>
+          <button class="popup__button" type="submit" aria-label="Создать">Создать</button>
         </form>
       </div>
     </div>
@@ -78,5 +82,6 @@
 
   </div>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 </html>
