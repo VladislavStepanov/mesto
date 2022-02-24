@@ -75,8 +75,8 @@ function doCloseByOverlay(event) {
 }
 
 function doCloseByEsc (event) {
-  const popupOpened = document.querySelector('.popup_opened');
   if (event.key === 'Escape') {
+    const popupOpened = document.querySelector('.popup_opened');
     doClosePopap(popupOpened);
   }
 }
@@ -97,6 +97,9 @@ submitName.addEventListener('submit', function (event) {
 placeOpenPoppupButton.addEventListener('click', function () {
   submitNamePlace.reset()
   doOpenPopap(popupPlace)
+  const inputList = Array.from(popupPlace.querySelectorAll(config.inputSelector));
+  const buttonElement = popupPlace.querySelector(config.submitButtonSelector);
+  toggleButtonState(config, inputList, buttonElement)
 });
 
 popupCloseImage.addEventListener('click', function() {

@@ -1,11 +1,3 @@
-enableValidation(config = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__fild',
-  submitButtonSelector: '.popup__button',
-  inactiveButtonClass: 'popup__button_disabled',
-  inputErrorClass: 'popup__input-error',
-});
-
 // функция запускающая валидацию
 const enableValidation = (config) => {
   const formList = document.querySelectorAll(config.formSelector);//псевдомассив
@@ -40,13 +32,14 @@ function toggleButtonState(config, inputList, buttonElement) {
   }
 };
 
-// Проверка true/false
+// Проверка
 function hasInvalidInput(inputList) {
   return inputList.some((inputElement) => {
     return !inputElement.validity.valid;
   })
 };
 
+// проверка
 function isValid(formElement, inputElement) {
   if (inputElement.validity.valid) {
     hideInputError(config, formElement, inputElement)
@@ -55,14 +48,24 @@ function isValid(formElement, inputElement) {
   }
 };
 
+// выдает ошибку
 function showInputError(config, formElement, inputElement, errorMessage) {
   const errorElement = formElement.querySelector(`span[name=${inputElement.name}-error]`);
   inputElement.classList.add(config.inputErrorClass);
   errorElement.textContent = errorMessage;
 };
 
+// скрывает ошибку
 function hideInputError(config, formElement, inputElement) {
   const errorElement = formElement.querySelector(`span[name=${inputElement.name}-error]`);
   inputElement.classList.remove(config.inputErrorClass);
   errorElement.textContent = '';
 };
+
+enableValidation(config = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__fild',
+  submitButtonSelector: '.popup__button',
+  inactiveButtonClass: 'popup__button_disabled',
+  inputErrorClass: 'popup__input-error',
+});
